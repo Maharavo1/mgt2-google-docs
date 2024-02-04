@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+
 export default function Login() {
   const router = useRouter();
 
   const handleSignupClick = () => {
-    router.push('/signup')
+    router.push('/signup');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 shadow-md rounded-md w-96">
-        <h2 className="text-2xl font-semibold mb-6">Login</h2>
-       
+        <h2 className="text-2xl font-semibold mb-6">Login from google docs</h2>
 
         <form>
           <div className="mb-4">
@@ -43,6 +43,12 @@ export default function Login() {
             Login
           </button>
         </form>
+
+        {/* Ajoutez le paragraphe avec le lien Forgot Password */}
+        <p className="mt-2 text-sm text-gray-600">
+          <a href="/forgot-password">Forgot Password?</a>
+        </p>
+
         <button
           type="button"
           onClick={handleSignupClick}
